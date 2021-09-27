@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @AllArgsConstructor
-@RequestMapping("/frete")
+//@RequestMapping("/frete")
 @CrossOrigin(origins = "*")
 @Api(value = "Transportadora Siga Bem - Cálculo de Frete")
 public class FreteController {
