@@ -1,15 +1,20 @@
 package com.sigabem.calculofrete.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.service.VendorExtension;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import java.util.ArrayList;
+
 
 @Configuration
 @EnableSwagger2
@@ -20,16 +25,20 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                     .select()
                     .apis(RequestHandlerSelectors.basePackage("com.sigabem.calculofrete"))
                     .build()
-                    .apiInfo(metaData());
+                    .apiInfo(metaInfo());
         }
-        private ApiInfo metaData() {
-            return new ApiInfoBuilder()
-                    .title("Transportadora Siga Bem - Cálculo de Frete")
-                    .description("API para Cálculo de frete por endereço")
-                    .version("1.0.0")
-                    .license("Apache License Version 2.0")
-                    .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
-                    .build();
+        private ApiInfo metaInfo() {
+            return new ApiInfo(
+                    "Transportadora Siga Bem - Cálculo de Frete",
+                    "API para Cálculo de frete por endereço",
+                    "1.0.0",
+                    "Terms of Service",
+                    new Contact("Vitório Venturi", "https://github.com/v-venturi",
+                            "vitorioventuri@gmail.com"),
+                    "Apache License Version 2.0",
+                    "https://www.apache.org/licenses/LICENSE-2.0",
+                    new ArrayList<VendorExtension>()
+                    );
         }
         @Override
         protected void addResourceHandlers(ResourceHandlerRegistry registry) {
