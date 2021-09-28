@@ -1,13 +1,13 @@
-server:
-  error:
-    include-stacktrace: on_param
-
-spring:
-  datasource:
-#    url: jdbc:mysql://localhost:3306/sigabem?useSSL=false&createDatabaseIfNotExist=true
-        url: jdbc:mysql://`remote_database_url`
-    username: root
-    password: root
-  jpa:
-    hibernate:
-      ddl-auto: update
+#server:
+#  error:
+#    include-stacktrace: on_param
+#
+#spring:
+#  datasource:
+##    url: jdbc:mysql://localhost:3306/sigabem?useSSL=false&createDatabaseIfNotExist=true
+#        url: jdbc:mysql://`remote_database_url`
+#    username: root
+#    password: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
