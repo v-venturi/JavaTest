@@ -1,9 +1,13 @@
 package com.sigabem.calculofrete.exceptions;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.client.HttpStatusCodeException;
 
-public class CepNaoEncontradoException extends Exception{
+public class CepNaoEncontradoException extends HttpStatusCodeException {
+    public CepNaoEncontradoException(HttpStatus statusCode, String statusText) {
+        super(statusCode, statusText);
+    }
+
 
 }
 

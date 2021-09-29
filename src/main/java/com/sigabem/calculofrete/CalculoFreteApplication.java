@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
-@SpringBootApplication(scanBasePackages={"com.sigabem.calculofrete"})
+@SpringBootApplication(scanBasePackages = {"com.sigabem.calculofrete"})
 public class CalculoFreteApplication {
     public static void main(String[] args) {
         SpringApplication.run(CalculoFreteApplication.class, args);

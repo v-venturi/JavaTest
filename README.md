@@ -40,3 +40,8 @@ Deve ser persistido no banco os valores da cotação os valores consultados: “
 
 # Entrega: 
  * Disponibilizar um link do repositório no GitHub e encaminhar para developer@cd2.com.br
+
+## Link para Swagger da API:
+https://sigabem-api.herokuapp.com/swagger-ui.html
+## Endpoint da API implementada :
+https://sigabem-api.herokuapp.com/consultafrete

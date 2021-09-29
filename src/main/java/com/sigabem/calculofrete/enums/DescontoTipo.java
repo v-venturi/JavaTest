@@ -5,9 +5,9 @@ public enum DescontoTipo {
     MESMA_UF(0.75),
     UF_DIFERENTE(0);
 
-    public double desconto;
+    private double desconto;
 
-    DescontoTipo(double valor) {
+    private DescontoTipo(double valor) {
         desconto = valor;
     }
 

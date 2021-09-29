@@ -2,11 +2,23 @@ package com.sigabem.calculofrete.dto;
 
 
 
+
 public class FreteResponse {
-    private Double vlrTotalFrete;
-    private String dataPrevistaEntrega;
+
     private String cepOrigem;
     private String cepDestino;
+    private Double vlrTotalFrete;
+    private String dataPrevistaEntrega;
+
+    public FreteResponse(Double vlrTotalFrete, String dataPrevistaEntrega, String cepOrigem, String cepDestino) {
+        this.vlrTotalFrete = vlrTotalFrete;
+        this.dataPrevistaEntrega = dataPrevistaEntrega;
+        this.cepOrigem = cepOrigem;
+        this.cepDestino = cepDestino;
+    }
+
+    public FreteResponse() {
+    }
 
     public Double getVlrTotalFrete() {
         return vlrTotalFrete;
@@ -38,15 +50,5 @@ public class FreteResponse {
 
     public void setCepDestino(String cepDestino) {
         this.cepDestino = cepDestino;
-    }
-
-    public FreteResponse(Double vlrTotalFrete, String dataPrevistaEntrega, String cepOrigem, String cepDestino) {
-        this.vlrTotalFrete = vlrTotalFrete;
-        this.dataPrevistaEntrega = dataPrevistaEntrega;
-        this.cepOrigem = cepOrigem;
-        this.cepDestino = cepDestino;
-    }
-
-    public FreteResponse() {
     }
 }

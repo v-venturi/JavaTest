@@ -5,9 +5,9 @@ public enum PrazoTipo {
     MESMA_UF(-7),
     UF_DIFERENTE(10);
 
-    public int prazo;
+    private int prazo;
 
-    PrazoTipo(int dias) {
+    private PrazoTipo(int dias) {
         prazo = dias;
     }
 
@@ -19,4 +19,4 @@ public enum PrazoTipo {
         this.prazo = prazo;
     }
 
-    }
+}

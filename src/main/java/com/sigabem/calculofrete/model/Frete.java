@@ -5,23 +5,25 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.Hibernate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Getter
 @Setter
 @ToString
+@Table(name= "frete")
 public class Frete {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String nomeDestinatario;
+    @Column
     private Double peso;
+    @Column(length = 8)
     private String cepOrigem;
+    @Column(length = 8)
     private String cepDestino;
     private Double vlrTotalFrete;
     private String dataPrevistaEntrega;
